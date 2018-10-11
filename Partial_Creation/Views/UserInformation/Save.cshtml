@@ -1,0 +1,95 @@
+﻿@{
+    ViewBag.Title = "Message";
+}
+
+@*<h2>Message</h2>*@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+@*<body>
+    <script>
+    $(function() {
+    // this initializes the dialog (and uses some common options that I do)
+    $("#dialog").dialog({autoOpen : false, modal : true, show : "blind", hide : "blind"});
+
+    // next add the onclick handler
+    $("#btnSubmit").click(function () {
+        window.onload=function()
+        {
+            alert
+        }
+    return false;
+    });
+    });
+    </script>
+    @using (Html.BeginForm("Save", "UserInformation", FormMethod.Post))
+    {
+        <input type="text" id="txtName" name="name" />
+        <input type="submit" id="btnSubmit" value="Get Current Time" />
+    }
+
+    @if (ViewBag.Message != null)
+    {
+        <script type="text/javascript">
+            window.onload = function () {
+                alert("@ViewBag.Message");
+            };
+        </script>
+    }*@
+    @*<script>
+    $(document).ready(function () {
+    $("#<%=butSearch.ClientID%>").click(function (e) { // Button which will activate our modal
+    $('#modal').reveal({ // The item which will be opened with reveal
+    animation: 'fade',                   // fade, fadeAndPop, none
+    animationspeed: 600,                       // how fast animtions are
+    closeonbackgroundclick: true,              // if you click background will modal close?
+    dismissmodalclass: 'close'    // the class of a button or element that will close an open modal
+    });
+    return false;
+    });
+    });
+
+    </script>
+    <div id="modal">
+        <div id="heading">
+            Search Notification
+        </div>
+
+        <div id="content">
+            <p>Please be aware that any search via the xxxx, will incur a cost. Do you wish to proceed?</p>
+
+            <a href="#" class="button green close"><img src="../../Imgs/dialog_tick.png">Proceed</a>
+            <a href="#" class="button red close"><img src="../../Imgs/dialog_cross.png">Cancel</a>
+        </div>
+    </div>*@
+  @*@using (Html.BeginForm("Save", "UserInformation", FormMethod.Post))
+  {
+    <input type="text" id="txtName" name="name" />
+        <input type="submit" id="btnSubmit" value="Get Current Time" />
+  }
+</body>*@
+@*</html>*@
+<body>  
+    <script>
+        
+          
+            //$("#dialog").dialog({ autoOpen: false, modal: true, show: "blind", hide: "blind" });            
+            $("#btnSubmit").click(function () {
+                $("#dialog").dialog("open");
+                //return false;
+            });
+
+    </script>
+    @using (Html.BeginForm("Save", "UserInformation", FormMethod.Post))
+    {       
+        <input type="submit" id="btnSubmit" value="SaveAsPdf" />
+    }
+    <div id="dialog" title="Contact form">
+        <p>appear now</p>
+    </div>
+</body>
+</html>
